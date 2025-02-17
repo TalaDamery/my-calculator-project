@@ -15,14 +15,27 @@
       height: 100vh;
     }
 
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 20px #cfb8c2, 0 0 40px #cfb8c2, 0 0 60px #cfb8c2, 0 0 80px #cfb8c2;
+      }
+
+      50% {
+        box-shadow: 0 0 40px #cfb8c2, 0 0 80px #cfb8c2, 0 0 100px #cfb8c2, 0 0 120px #cfb8c2;
+      }
+
+      100% {
+        box-shadow: 0 0 20px #cfb8c2, 0 0 40px #cfb8c2, 0 0 60px #cfb8c2, 0 0 80px #cfb8c2;
+      }
+    }
+
     .calculator {
       background-color: rgba(0, 0, 0, 0.921);
-      background-size: cover;
-      background-position: center;
       padding: 20px;
       border-radius: 15px;
       text-align: center;
       width: 300px;
+      animation: glow 1.0s infinite alternate;
     }
 
     .js-calculation {
